@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedOCTadMask</defName>
+    <label>unfinished OC Tad mask</label>
+    <description>An unfinished OC Tad mask.</description>
+    <statBases>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Beauty>1</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>OCTad/Mask/Unfinished</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false"/>
+  </ThingDef>
+
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_OCTadMask</defName>
+    <label>OC Tad mask</label>
+    <description>The only known usage of OC Tad's pelt. Become one with OC Tad.</description>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <unfinishedThingDef>UnfinishedOCTadMask</unfinishedThingDef>
+    </recipeMaker>
+    <costList>  <!-- Direct cost. Not using costStuffCount & stuffCategories -->
+        <Leather_OCTad>1</Leather_OCTad>
+    </costList>
+    <graphicData>
+      <texPath>OCTad/Mask/Mask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <statBases>
+      <WorkToMake>6007</WorkToMake>
+      <MaxHitPoints>101</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.23</ArmorRating_Sharp> <!-- ~20% StuffPower -->
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt> <!-- ~20% StuffPower -->
+      <ArmorRating_Heat>0.23</ArmorRating_Heat> <!-- ~20% StuffPower -->
+      <Insulation_Cold>9.7</Insulation_Cold> <!-- ~50% StuffPower -->
+      <Insulation_Heat>1.7</Insulation_Heat> <!-- ~10% StuffPower -->
+      <EquipDelay>1.01</EquipDelay>
+      <Beauty>1</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.19</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.07</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <tradeability>None</tradeability>
+    <generateCommonality>0</generateCommonality>
+    <smeltable>false</smeltable>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>OCTad/Mask/Mask</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+        <li>Nudist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <tradeTags>
+      <li>Clothing</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingCategoryDef>
+    <defName>Tadfur</defName>
+    <label>tadfurs</label>
+    <parent>Textiles</parent>
+    <iconPath>OCTad/UI/Icon/Leathers</iconPath>
+  </ThingCategoryDef>
+
+  <StuffCategoryDef> <!-- Unused -->
+    <defName>Tadfurred</defName>
+    <label>tadfurred</label>
+    <noun>tadfur</noun>
+    <destroySoundSmall>BuildingDestroyed_Soft_Small</destroySoundSmall>
+    <destroySoundMedium>BuildingDestroyed_Soft_Medium</destroySoundMedium>
+  </StuffCategoryDef>  
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Leather_OCTad</defName>
+    <label>tadfur</label>
+    <description>Just as the origins of OC Tad itself elude us, little is known about the material properties or usages of this strange pelt.</description>
+    <graphicData>
+      <texPath>OCTad/Leather</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>61</MaxHitPoints>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Flammability>1</Flammability>
+      <MarketValue>0</MarketValue>
+      <StuffPower_Armor_Sharp>1.09</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.23</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.13</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>19</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>17</StuffPower_Insulation_Heat>
+      <Beauty>1</Beauty>
+    </statBases>
+    <thingCategories>
+      <li>Tadfur</li>
+    </thingCategories>
+    <tradeability>None</tradeability>
+    <burnableByRecipe>false</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stuffProps> <!-- Unused -->
+      <categories>
+        <li>Tadfurred</li>
+      </categories>
+      <color>(255,255,255)</color>
+      <commonality>0</commonality>
+      <statFactors>
+        <MaxHitPoints>1.31</MaxHitPoints>
+        <Beauty>3</Beauty>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <allowedArchonexusCount>83</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>
